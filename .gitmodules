@@ -1,0 +1,3 @@
+[submodule "ueberDB"]
+	path = ueberDB
+	url = git@github.com:leandromoreira/ueberDB.git

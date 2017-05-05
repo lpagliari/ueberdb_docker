@@ -1,0 +1,17 @@
+version: "2"
+services:
+  node:
+    image: node:6
+    working_dir: /ueberDB
+    command: bash -c "npm install && node_modules/mocha/bin/mocha tests/"
+    volumes:
+      - ./ueberDB:/ueberDB
+    links:
+      - db
+
+  db:
+    image: mongo
+    volumes:
+      - /data/db
+    ports:
+      - "27017:27017"
